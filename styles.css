@@ -1,0 +1,146 @@
+:root {
+    --text-color: black;
+    --shadow-color: white;
+    --header-color: rgba(0, 0, 0, 0.5);
+    --bg-image: url(Pictures/lightBackground.jpg);
+}
+
+.darkMode {
+    --text-color: white;
+    --shadow-color: black;
+    --header-color: rgba(255, 255, 255, 0.5);
+    --bg-image: url(Pictures/darkBackground.jpg);
+}
+
+* {
+    color: var(--text-color);
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow:
+        1px 1px 0 var(--shadow-color),
+        1px -1px 0 var(--shadow-color),
+        -1px 1px 0 var(--shadow-color),
+        -1px -1px 0 var(--shadow-color);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: scroll;
+}
+
+header {
+    background-color: var(--header-color);
+    border-bottom: 2px solid red;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color:red;
+    background-color: gray;
+    border-bottom: 2px solid red;
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+footer {
+    color:red;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: gray;
+    border-top: 2px solid red;
+    padding: 5px;
+}
+
+h1 {
+    color: red;
+    font-style: normal;
+    font-family: serif;
+    font-weight: bolder;
+    font-size: 4em;
+    text-align: center;
+}
+
+h2 {
+    font-family: serif;
+    font-style: normal;
+    font-size: 3em;
+    text-align: center;
+    padding: 10px;
+}
+
+h3 {
+    font-family: serif;
+    font-style: normal;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li::before {
+    content: "*";
+    margin-right: 10px;
+}
+
+div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    border: 3px solid red;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+#themeSwitch:hover, a:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#themeSwitch:active, a:active {
+    filter: brightness(50%);
+}
+
+a:link {
+    color:red;
+}
+
+a:visited {
+    color:red;
+}
+
+::selection {
+    color:var(--shadow-color);
+    background-color: var(--text-color);
+     text-shadow:
+        1px 1px 0 red,
+        1px -1px 0 red,
+        -1px 1px 0 red,
+        -1px -1px 0 red;
+}
+
+#themeSwitch {
+    background-color: gray;
+    align-items: center;
+    font-size: 20px;
+    border-color: red;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
